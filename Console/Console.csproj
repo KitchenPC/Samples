@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net10.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+   </PropertyGroup>
+
+   <ItemGroup>
+      <PackageReference Include="KitchenPC.Core" Version="1.0.1" />
+      <PackageReference Include="Terminal.Gui" Version="2.4.17" />
+   </ItemGroup>
+
+   <ItemGroup>
+      <None
+         Include="..\SampleData\KPCData.xml"
+         Link="SampleData\KPCData.xml"
+         CopyToOutputDirectory="PreserveNewest"
+      />
+   </ItemGroup>
+</Project>
