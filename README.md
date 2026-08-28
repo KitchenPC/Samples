@@ -31,6 +31,15 @@ endpoint through Swagger.
 
 See [WebApp/README.md](WebApp/README.md) for setup instructions.
 
+### Database Initializer
+
+A command-line provisioning tool that creates the KitchenPC schema in a PostgreSQL database and
+imports the bundled static sample data. It provides a repeatable local database for the Web API
+sample.
+
+See [DatabaseInitializer/README.md](DatabaseInitializer/README.md) for Docker, PostgreSQL, and
+provisioning instructions.
+
 ## Sample data
 
 `SampleData/KPCData.xml` is a small static snapshot containing ingredients, forms, NLP data, and

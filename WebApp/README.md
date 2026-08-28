@@ -9,9 +9,9 @@ ingredient name.
 - .NET 10 SDK
 - A PostgreSQL database containing the KitchenPC schema and data
 
-Database provisioning is not yet automated. More detailed provisioning guidance or tooling will
-be added separately. If you do not already have a KitchenPC database, start with the database-free
-[console sample](../Console/README.md).
+If you do not already have a KitchenPC database, use the
+[Database Initializer sample](../DatabaseInitializer/README.md) to start PostgreSQL with Docker,
+create the schema, and import the bundled sample data.
 
 ## Configure the connection
 
