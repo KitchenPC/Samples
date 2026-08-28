@@ -7,4 +7,5 @@
   <Project Path="Console.Tests/Console.Tests.csproj" />
   <Project Path="DatabaseInitializer/DatabaseInitializer.csproj" />
   <Project Path="WebApp/WebApp.csproj" />
+  <Project Path="WebApp.Tests/WebApp.Tests.csproj" />
 </Solution>

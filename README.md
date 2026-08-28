@@ -24,17 +24,18 @@ list in the current user's local application-data directory.
 
 See [Console/README.md](Console/README.md) for details.
 
-### WebApp
+### React Web App
 
-An ASP.NET Core Web API that uses `DBContext` with PostgreSQL and exposes an ingredient-parsing
-endpoint through Swagger.
+A modern ASP.NET Core, React, and TypeScript recipe site. It browses and searches the PostgreSQL
+sample recipes, displays full recipe details, and builds an aggregated shopping list from recipes
+and natural-language additions. It also demonstrates the parsing-only `DBContext` profile.
 
 See [WebApp/README.md](WebApp/README.md) for setup instructions.
 
 ### Database Initializer
 
 A command-line provisioning tool that creates the KitchenPC schema in a PostgreSQL database and
-imports the bundled static sample data. It provides a repeatable local database for the Web API
+imports the bundled static sample data. It provides a repeatable local database for the React web
 sample.
 
 See [DatabaseInitializer/README.md](DatabaseInitializer/README.md) for Docker, PostgreSQL, and

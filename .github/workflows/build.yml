@@ -42,6 +42,21 @@ jobs:
           --no-build
           --no-restore
 
+      - name: Test web sample
+        run: >-
+          dotnet test WebApp.Tests/WebApp.Tests.csproj
+          --configuration Release
+          --no-build
+          --no-restore
+
+      - name: Install web client dependencies
+        working-directory: WebApp/ClientApp
+        run: npm ci
+
+      - name: Check web client
+        working-directory: WebApp/ClientApp
+        run: npm run build && npm run lint && npm test
+
       - name: Run database-free sample
         run: >-
           dotnet run --project Console/Console.csproj

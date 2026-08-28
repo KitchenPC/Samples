@@ -1,5 +1,10 @@
 **/bin/
 **/obj/
+**/node_modules/
+WebApp/wwwroot/
+**/*.tsbuildinfo
+WebApp/ClientApp/vite.config.js
+WebApp/ClientApp/vite.config.d.ts
 .idea/
 .vscode/
 *.user

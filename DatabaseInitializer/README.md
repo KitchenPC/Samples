@@ -99,9 +99,9 @@ docker exec -it kitchenpc-postgres \
 
 `shoppingingredients` is the legacy KitchenPC schema name for the main ingredient catalog.
 
-## 6. Run the Web API sample
+## 6. Run the React web sample
 
-Give the Web API the same connection string through .NET user secrets:
+Give the web application the same connection string through .NET user secrets:
 
 ```bash
 dotnet user-secrets set \
@@ -116,7 +116,7 @@ Then run it:
 dotnet run --project WebApp/WebApp.csproj
 ```
 
-See [the WebApp README](../WebApp/README.md) for its Swagger endpoint and usage details.
+See [the WebApp README](../WebApp/README.md) for frontend setup and usage details.
 
 ## Options
 

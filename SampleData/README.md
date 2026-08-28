@@ -6,3 +6,8 @@ related records.
 
 This data is intentionally limited. It does not represent the full KitchenPC PostgreSQL database
 and should not be treated as a production dataset.
+
+Where available, recipe records contain absolute URLs for their corresponding photographs on the
+public `images.kitchenpc.com` CDN. The images are not bundled with this repository, so displaying
+them requires an internet connection. Recipes without a production photograph have an empty image
+URL and consuming samples should provide a fallback.

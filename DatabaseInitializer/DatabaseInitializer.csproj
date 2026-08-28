@@ -7,8 +7,8 @@
    </PropertyGroup>
 
    <ItemGroup>
-      <PackageReference Include="KitchenPC.Core" Version="1.0.1" />
-      <PackageReference Include="KitchenPC.DB" Version="1.0.1" />
+      <PackageReference Include="KitchenPC.Core" Version="1.1.0" />
+      <PackageReference Include="KitchenPC.DB" Version="1.1.0" />
    </ItemGroup>
 
    <ItemGroup>

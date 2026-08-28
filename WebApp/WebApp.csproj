@@ -2,11 +2,34 @@
    <PropertyGroup>
       <TargetFramework>net10.0</TargetFramework>
       <UserSecretsId>655dfd6e-9c6e-4d33-bb1c-ab868998e338</UserSecretsId>
+      <SpaRoot>ClientApp/</SpaRoot>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
    </PropertyGroup>
 
    <ItemGroup>
-      <PackageReference Include="KitchenPC.Core" Version="1.0.1" />
-      <PackageReference Include="KitchenPC.DB" Version="1.0.1" />
-      <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+      <PackageReference Include="KitchenPC.Core" Version="1.1.0" />
+      <PackageReference Include="KitchenPC.DB" Version="1.1.0" />
+      <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+      <PackageReference Include="log4net" Version="3.3.2" />
+      <PackageReference Include="NHibernate" Version="5.5.2" />
+      <PackageReference Include="Npgsql" Version="8.0.9" />
    </ItemGroup>
+
+   <ItemGroup>
+      <Content Remove="$(SpaRoot)**" />
+      <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules/**" />
+   </ItemGroup>
+
+   <Target Name="BuildClient" BeforeTargets="ComputeFilesToPublish">
+      <Exec WorkingDirectory="$(SpaRoot)" Command="npm ci" />
+      <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+      <ItemGroup>
+         <ClientDist Include="wwwroot/**" />
+         <ResolvedFileToPublish Include="@(ClientDist->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+            <RelativePath>wwwroot/%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+         </ResolvedFileToPublish>
+      </ItemGroup>
+   </Target>
 </Project>
