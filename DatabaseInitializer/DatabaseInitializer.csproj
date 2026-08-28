@@ -7,8 +7,11 @@
    </PropertyGroup>
 
    <ItemGroup>
-      <PackageReference Include="KitchenPC.Core" Version="1.1.0" />
-      <PackageReference Include="KitchenPC.DB" Version="1.1.0" />
+      <PackageReference Include="FluentNHibernate" Version="3.4.1" />
+      <PackageReference Include="KitchenPC.Core" Version="2.0.0" />
+      <PackageReference Include="KitchenPC.DB" Version="2.0.0" />
+      <PackageReference Include="NHibernate" Version="5.7.0" />
+      <PackageReference Include="Npgsql" Version="10.0.3" />
    </ItemGroup>
 
    <ItemGroup>
